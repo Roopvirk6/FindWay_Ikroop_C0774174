@@ -10,25 +10,55 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController{
     
     @IBOutlet weak var mapView: MKMapView!
     
     
-    
-    
-    var locationManager = CLLocationManager()
+   let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
+    }
+    func setupLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-        
+    }
+    
+    func checkLocationServices() {
+        if CLLocationManager.locationServicesEnabled(){
+            setupLocationManager()
+        }
+        else{
+            //show alert
+        }
     }
 
 
 }
+extension ViewController:CLLocationManagerDelegate
+{
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+    }
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
 

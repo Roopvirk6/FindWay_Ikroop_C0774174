@@ -21,17 +21,41 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="PHH-ZK-1gd"/>
                                 </connections>
                             </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="cTy-rN-it9">
+                                <rect key="frame" x="187" y="428" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="YDq-2G-jM8"/>
+                                    <constraint firstAttribute="height" constant="40" id="cnW-zf-vcx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWg-HD-Apz">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="37m-UM-OVG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ZGN-g6-jip" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6kQ-hg-2eV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QWg-HD-Apz" secondAttribute="trailing" id="KTs-dH-zlO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZGN-g6-jip" secondAttribute="bottom" id="SUJ-p9-gaD"/>
+                            <constraint firstItem="cTy-rN-it9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YBF-n8-Adv"/>
+                            <constraint firstItem="QWg-HD-Apz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c6L-L6-DAg"/>
+                            <constraint firstItem="cTy-rN-it9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hgb-Wp-taV"/>
                             <constraint firstItem="ZGN-g6-jip" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k2C-Ot-1iR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZGN-g6-jip" secondAttribute="trailing" id="w3O-VJ-Ymi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QWg-HD-Apz" secondAttribute="bottom" id="xPR-8W-eg9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="QWg-HD-Apz" id="6hV-U4-IEZ"/>
                         <outlet property="mapView" destination="ZGN-g6-jip" id="qzd-25-piU"/>
                     </connections>
                 </viewController>
@@ -40,4 +64,7 @@
             <point key="canvasLocation" x="139" y="117"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pin" width="259" height="194"/>
+    </resources>
 </document>

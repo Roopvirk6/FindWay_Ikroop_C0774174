@@ -21,18 +21,54 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="PHH-ZK-1gd"/>
                                 </connections>
                             </mapView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yas-zv-Xrr">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Find my way" id="ddf-tg-A0x"/>
+                                </items>
+                            </navigationBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TM9-UB-FXJ" userLabel="transportType">
+                                <rect key="frame" x="10" y="811" width="394" height="32"/>
+                                <segments>
+                                    <segment title="waliking"/>
+                                    <segment title="automobile"/>
+                                </segments>
+                            </segmentedControl>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="E2m-Nw-MND" userLabel="stepperzoom">
+                                <rect key="frame" x="10" y="759" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperMod:" destination="BYZ-38-t0r" eventType="valueChanged" id="WZv-4y-oAq"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPz-oH-g3m">
+                                <rect key="frame" x="348" y="761" width="46" height="30"/>
+                                <state key="normal" title="findWay"/>
+                                <connections>
+                                    <action selector="locationBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7I7-VR-Cfa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ZGN-g6-jip" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6kQ-hg-2eV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TM9-UB-FXJ" secondAttribute="trailing" constant="10" id="QJl-kC-bkd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZGN-g6-jip" secondAttribute="bottom" id="SUJ-p9-gaD"/>
+                            <constraint firstItem="TM9-UB-FXJ" firstAttribute="top" secondItem="JPz-oH-g3m" secondAttribute="bottom" constant="20" id="YEP-WF-9yY"/>
+                            <constraint firstItem="TM9-UB-FXJ" firstAttribute="top" secondItem="E2m-Nw-MND" secondAttribute="bottom" constant="20" id="jA4-W1-VaC"/>
                             <constraint firstItem="ZGN-g6-jip" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k2C-Ot-1iR"/>
+                            <constraint firstItem="TM9-UB-FXJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="qie-Ij-h8P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TM9-UB-FXJ" secondAttribute="bottom" constant="20" id="vzA-0M-nLK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZGN-g6-jip" secondAttribute="trailing" id="w3O-VJ-Ymi"/>
+                            <constraint firstItem="JPz-oH-g3m" firstAttribute="leading" secondItem="E2m-Nw-MND" secondAttribute="trailing" constant="40" id="yRO-vC-pWi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="ZGN-g6-jip" id="qzd-25-piU"/>
+                        <outlet property="findWay" destination="JPz-oH-g3m" id="fp4-fQ-r5C"/>
+                        <outlet property="mapView" destination="ZGN-g6-jip" id="Ssl-Cf-PfC"/>
+                        <outlet property="stepperzoom" destination="E2m-Nw-MND" id="5ni-4R-IuD"/>
+                        <outlet property="transportType" destination="TM9-UB-FXJ" id="x69-Hv-Wi9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

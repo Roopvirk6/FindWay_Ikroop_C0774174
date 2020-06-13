@@ -16,6 +16,7 @@ class ViewController: UIViewController{
     
     
    let locationManager = CLLocationManager()
+    let regionInMeters : Double = 100000
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,14 @@ class ViewController: UIViewController{
     func setupLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    }
+    
+    func centerViewOnUserLocation(){
+        if let location = locationManager.location?.coordinate
+        {
+            let region = MKCoordinateRegion.init(center : location,latitudinalMeters:regionInMeters,longitudinalMeters: regionInMeters)
+            mapView.setRegion(region, animated: true)
+        }
     }
     
     func checkLocationServices() {
@@ -44,6 +53,8 @@ class ViewController: UIViewController{
         switch CLLocationManager.authorizationStatus(){
         case .authorizedWhenInUse:
             mapView.showsUserLocation = true
+            centerViewOnUserLocation()
+            locationManager.startUpdatingLocation()
             break
         case .denied:
             //show alert

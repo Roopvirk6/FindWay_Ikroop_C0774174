@@ -11,6 +11,11 @@ import MapKit
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
+    @IBOutlet weak var mapView: MKMapView!
+    
+    
+    
+    
     var locationManager = CLLocationManager()
 
     override func viewDidLoad() {
@@ -20,6 +25,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
     }
 
 

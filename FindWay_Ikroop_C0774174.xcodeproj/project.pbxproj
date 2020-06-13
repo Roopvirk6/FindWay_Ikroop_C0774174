@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AD816862494548C0041B25D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD816852494548C0041B25D /* AppDelegate.swift */; };
+		1AD816882494548C0041B25D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD816872494548C0041B25D /* SceneDelegate.swift */; };
+		1AD8168A2494548C0041B25D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD816892494548C0041B25D /* ViewController.swift */; };
+		1AD8168D2494548C0041B25D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD8168B2494548C0041B25D /* Main.storyboard */; };
+		1AD8168F249454900041B25D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AD8168E249454900041B25D /* Assets.xcassets */; };
+		1AD81692249454900041B25D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD81690249454900041B25D /* LaunchScreen.storyboard */; };
+		1AD8169D249454900041B25D /* FindWay_Ikroop_C0774174Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8169C249454900041B25D /* FindWay_Ikroop_C0774174Tests.swift */; };
+		1AD816A8249454900041B25D /* FindWay_Ikroop_C0774174UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD816A7249454900041B25D /* FindWay_Ikroop_C0774174UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1AD81699249454900041B25D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AD8167A2494548C0041B25D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AD816812494548C0041B25D;
+			remoteInfo = FindWay_Ikroop_C0774174;
+		};
+		1AD816A4249454900041B25D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AD8167A2494548C0041B25D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AD816812494548C0041B25D;
+			remoteInfo = FindWay_Ikroop_C0774174;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1AD816822494548C0041B25D /* FindWay_Ikroop_C0774174.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindWay_Ikroop_C0774174.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AD816852494548C0041B25D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1AD816872494548C0041B25D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1AD816892494548C0041B25D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1AD8168C2494548C0041B25D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1AD8168E249454900041B25D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1AD81691249454900041B25D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1AD81693249454900041B25D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AD81698249454900041B25D /* FindWay_Ikroop_C0774174Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindWay_Ikroop_C0774174Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AD8169C249454900041B25D /* FindWay_Ikroop_C0774174Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindWay_Ikroop_C0774174Tests.swift; sourceTree = "<group>"; };
+		1AD8169E249454900041B25D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AD816A3249454900041B25D /* FindWay_Ikroop_C0774174UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindWay_Ikroop_C0774174UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AD816A7249454900041B25D /* FindWay_Ikroop_C0774174UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindWay_Ikroop_C0774174UITests.swift; sourceTree = "<group>"; };
+		1AD816A9249454900041B25D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1AD8167F2494548C0041B25D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AD81695249454900041B25D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AD816A0249454900041B25D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AD816792494548C0041B25D = {
+			isa = PBXGroup;
+			children = (
+				1AD816842494548C0041B25D /* FindWay_Ikroop_C0774174 */,
+				1AD8169B249454900041B25D /* FindWay_Ikroop_C0774174Tests */,
+				1AD816A6249454900041B25D /* FindWay_Ikroop_C0774174UITests */,
+				1AD816832494548C0041B25D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1AD816832494548C0041B25D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AD816822494548C0041B25D /* FindWay_Ikroop_C0774174.app */,
+				1AD81698249454900041B25D /* FindWay_Ikroop_C0774174Tests.xctest */,
+				1AD816A3249454900041B25D /* FindWay_Ikroop_C0774174UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1AD816842494548C0041B25D /* FindWay_Ikroop_C0774174 */ = {
+			isa = PBXGroup;
+			children = (
+				1AD816852494548C0041B25D /* AppDelegate.swift */,
+				1AD816872494548C0041B25D /* SceneDelegate.swift */,
+				1AD816892494548C0041B25D /* ViewController.swift */,
+				1AD8168B2494548C0041B25D /* Main.storyboard */,
+				1AD8168E249454900041B25D /* Assets.xcassets */,
+				1AD81690249454900041B25D /* LaunchScreen.storyboard */,
+				1AD81693249454900041B25D /* Info.plist */,
+			);
+			path = FindWay_Ikroop_C0774174;
+			sourceTree = "<group>";
+		};
+		1AD8169B249454900041B25D /* FindWay_Ikroop_C0774174Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1AD8169C249454900041B25D /* FindWay_Ikroop_C0774174Tests.swift */,
+				1AD8169E249454900041B25D /* Info.plist */,
+			);
+			path = FindWay_Ikroop_C0774174Tests;
+			sourceTree = "<group>";
+		};
+		1AD816A6249454900041B25D /* FindWay_Ikroop_C0774174UITests */ = {
+			isa = PBXGroup;
+			children = (
+				1AD816A7249454900041B25D /* FindWay_Ikroop_C0774174UITests.swift */,
+				1AD816A9249454900041B25D /* Info.plist */,
+			);
+			path = FindWay_Ikroop_C0774174UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1AD816812494548C0041B25D /* FindWay_Ikroop_C0774174 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AD816AC249454900041B25D /* Build configuration list for PBXNativeTarget "FindWay_Ikroop_C0774174" */;
+			buildPhases = (
+				1AD8167E2494548C0041B25D /* Sources */,
+				1AD8167F2494548C0041B25D /* Frameworks */,
+				1AD816802494548C0041B25D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindWay_Ikroop_C0774174;
+			productName = FindWay_Ikroop_C0774174;
+			productReference = 1AD816822494548C0041B25D /* FindWay_Ikroop_C0774174.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1AD81697249454900041B25D /* FindWay_Ikroop_C0774174Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AD816AF249454900041B25D /* Build configuration list for PBXNativeTarget "FindWay_Ikroop_C0774174Tests" */;
+			buildPhases = (
+				1AD81694249454900041B25D /* Sources */,
+				1AD81695249454900041B25D /* Frameworks */,
+				1AD81696249454900041B25D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AD8169A249454900041B25D /* PBXTargetDependency */,
+			);
+			name = FindWay_Ikroop_C0774174Tests;
+			productName = FindWay_Ikroop_C0774174Tests;
+			productReference = 1AD81698249454900041B25D /* FindWay_Ikroop_C0774174Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1AD816A2249454900041B25D /* FindWay_Ikroop_C0774174UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AD816B2249454900041B25D /* Build configuration list for PBXNativeTarget "FindWay_Ikroop_C0774174UITests" */;
+			buildPhases = (
+				1AD8169F249454900041B25D /* Sources */,
+				1AD816A0249454900041B25D /* Frameworks */,
+				1AD816A1249454900041B25D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AD816A5249454900041B25D /* PBXTargetDependency */,
+			);
+			name = FindWay_Ikroop_C0774174UITests;
+			productName = FindWay_Ikroop_C0774174UITests;
+			productReference = 1AD816A3249454900041B25D /* FindWay_Ikroop_C0774174UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1AD8167A2494548C0041B25D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = VirkIkroop;
+				TargetAttributes = {
+					1AD816812494548C0041B25D = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					1AD81697249454900041B25D = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 1AD816812494548C0041B25D;
+					};
+					1AD816A2249454900041B25D = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 1AD816812494548C0041B25D;
+					};
+				};
+			};
+			buildConfigurationList = 1AD8167D2494548C0041B25D /* Build configuration list for PBXProject "FindWay_Ikroop_C0774174" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1AD816792494548C0041B25D;
+			productRefGroup = 1AD816832494548C0041B25D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1AD816812494548C0041B25D /* FindWay_Ikroop_C0774174 */,
+				1AD81697249454900041B25D /* FindWay_Ikroop_C0774174Tests */,
+				1AD816A2249454900041B25D /* FindWay_Ikroop_C0774174UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1AD816802494548C0041B25D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AD81692249454900041B25D /* LaunchScreen.storyboard in Resources */,
+				1AD8168F249454900041B25D /* Assets.xcassets in Resources */,
+				1AD8168D2494548C0041B25D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AD81696249454900041B25D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AD816A1249454900041B25D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AD8167E2494548C0041B25D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AD8168A2494548C0041B25D /* ViewController.swift in Sources */,
+				1AD816862494548C0041B25D /* AppDelegate.swift in Sources */,
+				1AD816882494548C0041B25D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AD81694249454900041B25D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AD8169D249454900041B25D /* FindWay_Ikroop_C0774174Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AD8169F249454900041B25D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AD816A8249454900041B25D /* FindWay_Ikroop_C0774174UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1AD8169A249454900041B25D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AD816812494548C0041B25D /* FindWay_Ikroop_C0774174 */;
+			targetProxy = 1AD81699249454900041B25D /* PBXContainerItemProxy */;
+		};
+		1AD816A5249454900041B25D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AD816812494548C0041B25D /* FindWay_Ikroop_C0774174 */;
+			targetProxy = 1AD816A4249454900041B25D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1AD8168B2494548C0041B25D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AD8168C2494548C0041B25D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1AD81690249454900041B25D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AD81691249454900041B25D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1AD816AA249454900041B25D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1AD816AB249454900041B25D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1AD816AD249454900041B25D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FindWay_Ikroop_C0774174/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lambton.FindWay-Ikroop-C0774174";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1AD816AE249454900041B25D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FindWay_Ikroop_C0774174/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lambton.FindWay-Ikroop-C0774174";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1AD816B0249454900041B25D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FindWay_Ikroop_C0774174Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lambton.FindWay-Ikroop-C0774174Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindWay_Ikroop_C0774174.app/FindWay_Ikroop_C0774174";
+			};
+			name = Debug;
+		};
+		1AD816B1249454900041B25D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FindWay_Ikroop_C0774174Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lambton.FindWay-Ikroop-C0774174Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindWay_Ikroop_C0774174.app/FindWay_Ikroop_C0774174";
+			};
+			name = Release;
+		};
+		1AD816B3249454900041B25D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FindWay_Ikroop_C0774174UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lambton.FindWay-Ikroop-C0774174UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FindWay_Ikroop_C0774174;
+			};
+			name = Debug;
+		};
+		1AD816B4249454900041B25D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FindWay_Ikroop_C0774174UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lambton.FindWay-Ikroop-C0774174UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FindWay_Ikroop_C0774174;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1AD8167D2494548C0041B25D /* Build configuration list for PBXProject "FindWay_Ikroop_C0774174" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AD816AA249454900041B25D /* Debug */,
+				1AD816AB249454900041B25D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AD816AC249454900041B25D /* Build configuration list for PBXNativeTarget "FindWay_Ikroop_C0774174" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AD816AD249454900041B25D /* Debug */,
+				1AD816AE249454900041B25D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AD816AF249454900041B25D /* Build configuration list for PBXNativeTarget "FindWay_Ikroop_C0774174Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AD816B0249454900041B25D /* Debug */,
+				1AD816B1249454900041B25D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AD816B2249454900041B25D /* Build configuration list for PBXNativeTarget "FindWay_Ikroop_C0774174UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AD816B3249454900041B25D /* Debug */,
+				1AD816B4249454900041B25D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1AD8167A2494548C0041B25D /* Project object */;
+}

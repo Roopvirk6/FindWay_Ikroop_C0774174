@@ -56,6 +56,7 @@ class ViewController: UIViewController{
         case .authorizedAlways:
             break
         }
+    }
     
 
 
@@ -83,4 +84,4 @@ extension ViewController:CLLocationManagerDelegate
 
 
 
-}
+

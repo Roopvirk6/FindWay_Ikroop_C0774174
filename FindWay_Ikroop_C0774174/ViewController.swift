@@ -19,6 +19,7 @@ class ViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkLocationServices()
         // Do any additional setup after loading the view.
         
         
@@ -31,11 +32,31 @@ class ViewController: UIViewController{
     func checkLocationServices() {
         if CLLocationManager.locationServicesEnabled(){
             setupLocationManager()
+            checkLocationAuthorization()
         }
         else{
             //show alert
         }
     }
+    
+    func checkLocationAuthorization()
+    {
+        switch CLLocationManager.authorizationStatus(){
+        case .authorizedWhenInUse:
+            mapView.showsUserLocation = true
+            break
+        case .denied:
+            //show alert
+            break
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        case .restricted:
+            //show alert
+            break
+        case .authorizedAlways:
+            break
+        }
+    
 
 
 }
@@ -62,3 +83,4 @@ extension ViewController:CLLocationManagerDelegate
 
 
 
+}

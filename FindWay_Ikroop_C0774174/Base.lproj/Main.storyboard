@@ -11,17 +11,11 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FindWay_Ikroop_C0774174" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleAspectFit" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGN-g6-jip">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PHH-ZK-1gd"/>
-                                </connections>
-                            </mapView>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yas-zv-Xrr">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yas-zv-Xrr">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="4vY-ws-A5I"/>
@@ -31,53 +25,58 @@
                                     <navigationItem title="Find my way" id="ddf-tg-A0x"/>
                                 </items>
                             </navigationBar>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="E2m-Nw-MND" userLabel="stepperzoom">
-                                <rect key="frame" x="10" y="759" width="94" height="32"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nH0-cC-zEO">
+                                <rect key="frame" x="20" y="88" width="374" height="754"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vE-NV-2Dq">
+                                <rect key="frame" x="330" y="788" width="64" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Walking">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
-                                    <action selector="stepperMod:" destination="BYZ-38-t0r" eventType="valueChanged" id="WZv-4y-oAq"/>
+                                    <action selector="btnWalking:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KHQ-sQ-kQt"/>
                                 </connections>
-                            </stepper>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vs-E9-R8B">
-                                <rect key="frame" x="104" y="808" width="92" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="277-Sb-tye"/>
-                                    <constraint firstAttribute="width" constant="92" id="SM6-Pv-lEy"/>
-                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggt-mG-Ww9">
+                                <rect key="frame" x="20" y="788" width="92" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Automobile">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="automobileBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qNI-Yd-eH5"/>
+                                    <action selector="automobileBtn1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AFU-a1-ynI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPz-oH-g3m">
-                                <rect key="frame" x="199" y="805" width="195" height="34"/>
-                                <state key="normal" title="Walking">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="gCq-Gf-bV6">
+                                <rect key="frame" x="30" y="736" width="94" height="32"/>
                                 <connections>
-                                    <action selector="locationBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k53-8u-5TT"/>
-                                    <action selector="walkingBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Kx-sl-bZn"/>
+                                    <action selector="stepperMode:" destination="BYZ-38-t0r" eventType="valueChanged" id="OXc-FO-cZB"/>
                                 </connections>
-                            </button>
+                            </stepper>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="JPz-oH-g3m" firstAttribute="top" secondItem="Yas-zv-Xrr" secondAttribute="bottom" constant="20" id="16Y-P4-wUb"/>
-                            <constraint firstItem="ZGN-g6-jip" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6kQ-hg-2eV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZGN-g6-jip" secondAttribute="bottom" id="SUJ-p9-gaD"/>
-                            <constraint firstItem="ZGN-g6-jip" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k2C-Ot-1iR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZGN-g6-jip" secondAttribute="trailing" id="w3O-VJ-Ymi"/>
-                            <constraint firstItem="JPz-oH-g3m" firstAttribute="leading" secondItem="E2m-Nw-MND" secondAttribute="trailing" constant="40" id="yRO-vC-pWi"/>
+                            <constraint firstItem="Yas-zv-Xrr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0SZ-ai-M6J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nH0-cC-zEO" secondAttribute="bottom" constant="20" id="2Ku-Et-Hjh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7vE-NV-2Dq" secondAttribute="bottom" constant="40" id="41w-b8-6ic"/>
+                            <constraint firstItem="nH0-cC-zEO" firstAttribute="top" secondItem="Yas-zv-Xrr" secondAttribute="bottom" id="5jk-wI-V58"/>
+                            <constraint firstItem="Ggt-mG-Ww9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5vt-NG-JME"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ggt-mG-Ww9" secondAttribute="bottom" constant="40" id="G2E-HQ-Ma6"/>
+                            <constraint firstItem="gCq-Gf-bV6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="GjP-V4-8yn"/>
+                            <constraint firstItem="nH0-cC-zEO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TFi-ib-e8S"/>
+                            <constraint firstItem="Ggt-mG-Ww9" firstAttribute="top" secondItem="gCq-Gf-bV6" secondAttribute="bottom" constant="20" id="ZZa-sU-OvW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nH0-cC-zEO" secondAttribute="trailing" constant="20" id="h7P-2g-Gwf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7vE-NV-2Dq" secondAttribute="trailing" constant="20" id="rbq-8W-ixH"/>
+                            <constraint firstItem="Yas-zv-Xrr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="x6F-Cp-hc3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="automobileBtn" destination="4vs-E9-R8B" id="Zq5-xU-vGe"/>
-                        <outlet property="findWay" destination="JPz-oH-g3m" id="fp4-fQ-r5C"/>
-                        <outlet property="mapView" destination="ZGN-g6-jip" id="Ssl-Cf-PfC"/>
-                        <outlet property="stepperzoom" destination="E2m-Nw-MND" id="5ni-4R-IuD"/>
+                        <outlet property="automobileBtn" destination="Ggt-mG-Ww9" id="9uU-D5-O3k"/>
+                        <outlet property="mapView" destination="nH0-cC-zEO" id="u1y-FW-Day"/>
+                        <outlet property="stepperZoom" destination="gCq-Gf-bV6" id="nfF-n2-ICY"/>
+                        <outlet property="walkingBtn" destination="7vE-NV-2Dq" id="ugY-dA-cCt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -4,17 +4,27 @@ import MapKit
 import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate{
-
+    
+    
+    
     @IBOutlet weak var mapView: MKMapView!
     
-    @IBOutlet weak var stepperzoom: UIStepper!
+    
+    @IBOutlet weak var walkingBtn: UIButton!
     
     
-    @IBOutlet weak var findWay: UIButton!
-    
-    
-    
+
     @IBOutlet weak var automobileBtn: UIButton!
+    
+
+    
+    @IBOutlet weak var stepperZoom: UIStepper!
+    
+    
+    
+    
+    
+    
     
     var originalvalue = 0.0
     
@@ -97,91 +107,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     
     
     
-    
-    @IBAction func locationBtn(_ sender: Any)
+    @IBAction func btnWalking(_ sender: Any)
     {
-        
-        mapView.removeOverlays(mapView.overlays)
-            
-            let sourcePlacemark = MKPlacemark(coordinate: locationManager.location!.coordinate)
-            let destinationPlacemark = MKPlacemark(coordinate: destination)
-            
-            //req a direction
-            let directionReq = MKDirections.Request()
-            
-            
-            //define source and dest
-            directionReq.source = MKMapItem(placemark: sourcePlacemark)
-            directionReq.destination = MKMapItem(placemark: destinationPlacemark)
-            
-            directionReq.transportType = .walking
-            
-            let direction = MKDirections(request: directionReq)
-            direction.calculate { (response, error) in
-                guard let directionResponse = response else {
-                    return
-                }
-                //create route
-                let route = directionResponse.routes[0]
-                
-                //draw polyline
-                self.mapView.addOverlay(route.polyline, level: .aboveRoads)
-                
-                //define the bounding map rect
-                let rect = route.polyline.boundingMapRect
-                self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
-                
-                self.mapView.setVisibleMapRect(rect, animated: true)
-                self.mapView.setVisibleMapRect(rect, edgePadding: UIEdgeInsets(top: 100, left: 100, bottom: 100, right: 100), animated: true)
-
-        }
-       
-    }
-    
-  
-    
-    func zoomIn() {
-         var region: MKCoordinateRegion = mapView.region
-                                           region.span.latitudeDelta /= 2.0
-                                           region.span.longitudeDelta /= 2.0
-                                           mapView.setRegion(region, animated: true)
-    }
-    
-    func zoomOut(){
-         var region: MKCoordinateRegion = mapView.region
-                                            region.span.latitudeDelta = min(region.span.latitudeDelta * 2.0, 180.0)
-                                            region.span.longitudeDelta = min(region.span.longitudeDelta * 2.0, 180.0)
-                                            mapView.setRegion(region, animated: true)
-    }
-    
-    
-    
-    
-    @IBAction func stepperMod(_ sender: Any) {
-        
-        var newvalue = stepperzoom.value
-        
-        if(newvalue > self.originalvalue){
-
-            self.originalvalue = stepperzoom.value
-
-            zoomIn()
-            
-        }else {
-
-            self.originalvalue = stepperzoom.value
-
-        zoomOut()
-            
-        }
-        
-       
-    }
-    
-    
-    
-      
-    @IBAction func automobileBtn(_ sender: Any) {
         mapView.removeOverlays(mapView.overlays)
         
         let sourcePlacemark = MKPlacemark(coordinate: locationManager.location!.coordinate)
@@ -220,11 +147,100 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         }
         
         
+    }
+    
+    
+    
+    
+  
+    
+    func zoomIn() {
+         var region: MKCoordinateRegion = mapView.region
+                                           region.span.latitudeDelta /= 2.0
+                                           region.span.longitudeDelta /= 2.0
+                                           mapView.setRegion(region, animated: true)
+    }
+    
+    func zoomOut(){
+         var region: MKCoordinateRegion = mapView.region
+                                            region.span.latitudeDelta = min(region.span.latitudeDelta * 2.0, 180.0)
+                                            region.span.longitudeDelta = min(region.span.longitudeDelta * 2.0, 180.0)
+                                            mapView.setRegion(region, animated: true)
+    }
+    
+    
+    
+    
+    @IBAction func stepperMode(_ sender: Any)
+    {
+        
+        var newvalue = stepperZoom.value
+        
+        if(newvalue > self.originalvalue){
+
+            self.originalvalue = stepperZoom.value
+
+            zoomIn()
+            
+        }else {
+
+            self.originalvalue = stepperZoom.value
+
+        zoomOut()
+            
+        }
         
     }
     
+    
+    
+    @IBAction func automobileBtn1(_ sender: Any)
+    {
+        mapView.removeOverlays(mapView.overlays)
         
+        let sourcePlacemark = MKPlacemark(coordinate: locationManager.location!.coordinate)
+        let destinationPlacemark = MKPlacemark(coordinate: destination)
+        
+        //req a direction
+        let directionReq = MKDirections.Request()
+        
+        
+        //define source and dest
+        directionReq.source = MKMapItem(placemark: sourcePlacemark)
+        directionReq.destination = MKMapItem(placemark: destinationPlacemark)
+        
+        directionReq.transportType = .automobile
+        
+        let direction = MKDirections(request: directionReq)
+        direction.calculate { (response, error) in
+            guard let directionResponse = response else {
+                return
+            }
+            //create route
+            let route = directionResponse.routes[0]
+            
+            //draw polyline
+            
+           
+            self.mapView.addOverlay(route.polyline, level: .aboveRoads)
+            
+            //define the bounding map rect
+            let rect = route.polyline.boundingMapRect
+            self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
+            
+            self.mapView.setVisibleMapRect(rect, animated: true)
+            self.mapView.setVisibleMapRect(rect, edgePadding: UIEdgeInsets(top: 100, left: 100, bottom: 100, right: 100), animated: true)
+            
+        }
+        
+        
+    }
+    
+    
+    
+    
 }
+
 
 
 

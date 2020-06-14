@@ -111,7 +111,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     {
         mapView.removeOverlays(mapView.overlays)
         
-        let sourcePlacemark = MKPlacemark(coordinate: locationManager.location!.coordinate)
+        let sourcePlaceMark = MKPlacemark(coordinate: locationManager.location!.coordinate)
         let destinationPlacemark = MKPlacemark(coordinate: destination)
         
         //req a direction
@@ -119,7 +119,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         
         
         //define source and dest
-        directionReq.source = MKMapItem(placemark: sourcePlacemark)
+        directionReq.source = MKMapItem(placemark: sourcePlaceMark)
         directionReq.destination = MKMapItem(placemark: destinationPlacemark)
         
         directionReq.transportType = .walking

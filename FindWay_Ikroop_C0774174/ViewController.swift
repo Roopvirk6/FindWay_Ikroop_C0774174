@@ -13,50 +13,40 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     @IBOutlet weak var walkingBtn: UIButton!
     
     
-
+    @IBOutlet var locationBtn: UIButton!
+    
     @IBOutlet weak var automobileBtn: UIButton!
     
 
     
     @IBOutlet weak var stepperZoom: UIStepper!
     
-    
-    
-    
-    
-    
-    
     var originalvalue = 0.0
     
     var locationManager = CLLocationManager()
-    
-    var destination:CLLocationCoordinate2D!
-    
+       var lat: CLLocationDegrees??
+       var lon: CLLocationDegrees??
+       var location: CLLocation?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        mapView.delegate = self
-        
-        locationManager.delegate = self
-        
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        
-        locationManager.requestWhenInUseAuthorization()
-        
-        locationManager.stopUpdatingLocation()
-        
-        let latitude: CLLocationDegrees = 43.64
-        let longitude: CLLocationDegrees = -79.38
-        
-
-        let doubleTap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
-               doubleTap.numberOfTapsRequired = 2
-               mapView.addGestureRecognizer(doubleTap)
-    
-    
-       
+         mapView.delegate = self
+                 locationManager.delegate = self
+                 
+                 //Permission and finding inital location
+                 locationManager.requestWhenInUseAuthorization()
+                 locationManager.desiredAccuracy = kCLLocationAccuracyBest
+                 locationManager.distanceFilter = kCLDistanceFilterNone
+                 locationManager.startUpdatingLocation()
+                 
+                 //Map interactivity
+                 mapView.showsUserLocation = true
+                 mapView.isZoomEnabled = false
+                 
+                 //Added double tap gesture
+        doubleTapped(gesture: <#UIGestureRecognizer#>)
+                 
 
        
     }
@@ -81,22 +71,25 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     
        
        @objc func doubleTapped(gesture: UIGestureRecognizer){
-           
-           let touchpoint = gesture.location(in: mapView)
-           let coordinates = mapView.convert(touchpoint, toCoordinateFrom: mapView)
-          addAnnotation(coordinates, "Double Tapped", "Location")
-            self.destination = coordinates
+           let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
+                             tap.numberOfTapsRequired = 2
+                             mapView.addGestureRecognizer(tap)
        }
     
-    func addAnnotation(_ coordinates: CLLocationCoordinate2D, _ title: String, _ subtitle: String){
-            
-            removePin()
-            //  add annotation
-            let annotation = MKPointAnnotation()
-            annotation.title = title
-            annotation.subtitle = subtitle
-            annotation.coordinate = coordinates
-            mapView.addAnnotation(annotation)
+    func addAnnotation(location: CLLocationCoordinate2D)
+           {
+             //Removing previous annotations and route
+                      self.mapView.removeOverlays(self.mapView.overlays)
+                      let oldAnnotations = self.mapView.annotations
+                      self.mapView.removeAnnotations(oldAnnotations)
+                      
+                      //Adding new annotation
+                      let annotation = MKPointAnnotation()
+                      annotation.coordinate = location
+                      lat = annotation.coordinate.latitude
+                      lon = annotation.coordinate.longitude
+                      annotation.title = "Destination"
+                      self.mapView.addAnnotation(annotation)
         }
 
         func removePin(){
@@ -245,6 +238,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
 
 
 extension ViewController : MKMapViewDelegate{
+    
+    
+    
     
     
     

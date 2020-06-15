@@ -25,11 +25,11 @@
                                     <navigationItem title="Find my way" id="ddf-tg-A0x"/>
                                 </items>
                             </navigationBar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nH0-cC-zEO">
-                                <rect key="frame" x="20" y="88" width="374" height="754"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nH0-cC-zEO">
+                                <rect key="frame" x="21" y="88" width="374" height="754"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vE-NV-2Dq">
-                                <rect key="frame" x="330" y="788" width="64" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vE-NV-2Dq">
+                                <rect key="frame" x="152" y="788" width="64" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Walking">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -54,6 +54,14 @@
                                     <action selector="stepperMode:" destination="BYZ-38-t0r" eventType="valueChanged" id="OXc-FO-cZB"/>
                                 </connections>
                             </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLH-zN-tkE">
+                                <rect key="frame" x="327" y="782" width="39" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="E82-1i-D52"/>
+                                    <constraint firstAttribute="width" constant="46" id="OzE-ox-J6X"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="paperplane" catalog="system"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -64,9 +72,11 @@
                             <constraint firstItem="Ggt-mG-Ww9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5vt-NG-JME"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ggt-mG-Ww9" secondAttribute="bottom" constant="40" id="G2E-HQ-Ma6"/>
                             <constraint firstItem="gCq-Gf-bV6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="GjP-V4-8yn"/>
+                            <constraint firstItem="kLH-zN-tkE" firstAttribute="leading" secondItem="Ggt-mG-Ww9" secondAttribute="trailing" constant="216" id="On2-P6-0x7"/>
                             <constraint firstItem="nH0-cC-zEO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TFi-ib-e8S"/>
                             <constraint firstItem="Ggt-mG-Ww9" firstAttribute="top" secondItem="gCq-Gf-bV6" secondAttribute="bottom" constant="20" id="ZZa-sU-OvW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nH0-cC-zEO" secondAttribute="trailing" constant="20" id="h7P-2g-Gwf"/>
+                            <constraint firstItem="kLH-zN-tkE" firstAttribute="bottom" secondItem="nH0-cC-zEO" secondAttribute="bottom" id="nIc-vy-gqs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7vE-NV-2Dq" secondAttribute="trailing" constant="20" id="rbq-8W-ixH"/>
                             <constraint firstItem="Yas-zv-Xrr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="x6F-Cp-hc3"/>
                         </constraints>
@@ -74,6 +84,7 @@
                     </view>
                     <connections>
                         <outlet property="automobileBtn" destination="Ggt-mG-Ww9" id="9uU-D5-O3k"/>
+                        <outlet property="locationBtn" destination="kLH-zN-tkE" id="pZG-Wd-zqB"/>
                         <outlet property="mapView" destination="nH0-cC-zEO" id="u1y-FW-Day"/>
                         <outlet property="stepperZoom" destination="gCq-Gf-bV6" id="nfF-n2-ICY"/>
                         <outlet property="walkingBtn" destination="7vE-NV-2Dq" id="ugY-dA-cCt"/>
@@ -84,4 +95,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="paperplane" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

@@ -22,6 +22,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     @IBOutlet weak var stepperZoom: UIStepper!
     
     var originalvalue = 0.0
+    var destination: CLLocationCoordinate2D!
     
     var locationManager = CLLocationManager()
        var lat: CLLocationDegrees??
@@ -45,7 +46,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
                  mapView.isZoomEnabled = false
                  
                  //Added double tap gesture
-        doubleTapped(gesture: <#UIGestureRecognizer#>)
+        
+                 addDoubleTap()
                  
 
        
@@ -69,12 +71,41 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
            mapView.setRegion(region, animated: true)
        }
     
+    
+    func addDoubleTap() {
+            let doubleTap = UITapGestureRecognizer(target: self, action: #selector(dropPin))
+            doubleTap.numberOfTapsRequired = 2
+            mapView.addGestureRecognizer(doubleTap)
+        }
+        
+        @objc func dropPin(sender: UITapGestureRecognizer) {
+            removePin()
+            
+            // add annotation
+            
+            let touchPoint = sender.location(in: mapView)
+            let coordinate = mapView.convert(touchPoint, toCoordinateFrom: mapView)
+            let annotation = MKPointAnnotation()
+            annotation.title = "My destination"
+            annotation.coordinate = coordinate
+            mapView.addAnnotation(annotation)
+            
+            destination = coordinate
+        }
+        
+        func removePin() {
+            for annotation in mapView.annotations {
+                mapView.removeAnnotation(annotation)
+            }
+        //mapView.removeAnnotations(mapView.annotations)
+        }
+    
        
-       @objc func doubleTapped(gesture: UIGestureRecognizer){
-           let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
-                             tap.numberOfTapsRequired = 2
-                             mapView.addGestureRecognizer(tap)
-       }
+      // @objc func doubleTapped(gesture: UIGestureRecognizer){
+       //    let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
+        //                     tap.numberOfTapsRequired = 2
+        //                     mapView.addGestureRecognizer(tap)
+    //   }
     
     func addAnnotation(location: CLLocationCoordinate2D)
            {
@@ -92,11 +123,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
                       self.mapView.addAnnotation(annotation)
         }
 
-        func removePin(){
         
-            mapView.removeAnnotations(mapView.annotations)
-        }
-    
     
     
     
